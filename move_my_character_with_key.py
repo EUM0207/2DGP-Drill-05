@@ -47,7 +47,7 @@ while running:
         sprite_y = 360
     elif dir == (0, 1):
         sprite_y = 0
-    else:  # IDLE 상태
+    else: 
         sprite_y = 0
 
     if dir != (0, 0):
@@ -61,7 +61,7 @@ while running:
     background.draw(1280 // 2, 1024 // 2)
     if dir == (0,0):
         character.clip_draw(idle_frame * 160, sprite_y, 160, 360, x, y, 160, 240)
-    if dir[0] == -1 or dir[0] == 1:  # 왼쪽 이동
+    if dir[0] == -1 or dir[0] == 1: 
         character.clip_composite_draw(frame * 160, sprite_y, 160, 360, 0, 'h', x, y, 160, 240)
     else:
         character.clip_draw(frame * 160, sprite_y,160, 360, x, y, 160, 240)
